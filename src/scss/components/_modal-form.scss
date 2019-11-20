@@ -1,0 +1,330 @@
+.modal-form {
+
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 15px 0;
+        display: flex;
+
+        @media (min-width: 576px) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .modal-content {
+        border-radius: 8px;
+        border: none;
+        width: 100%;
+        max-width: 670px;
+        margin: auto;
+    }
+
+    .modal-header {
+        padding: 38px 50px 32px;
+        background: linear-gradient(261.43deg, #6B95E3 0%, #6784D0 100%);
+        position: relative;
+    }
+
+    .modal-title {
+        font-size: 22px;
+        line-height: 31px;
+        color: #fff;
+    }
+
+    .close {
+        width: 21px;
+        height: 26px;
+        padding: 0;
+        opacity: 1;
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+
+        &:before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 24px;
+            top: 13px;
+            right: -2px;
+            background: #fff;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .modal-body {
+        padding: 48px 50px 0;
+    }
+
+    &__search-panel {
+        display: flex;
+    }
+
+    &__search-container {
+        flex: 1;
+        margin-right: 9px;
+        position: relative;
+
+        &.error {
+            .modal-form__search-field {
+                border: 1px solid red;   
+            }
+
+            .error-message {
+                display: block;
+            }
+        }
+    }
+
+    .error-message {
+        display: none;
+        color: red;
+        font-size: 12px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+    &__search-field {
+        height: 45px;
+        padding: 5px 105px 5px 40px;
+        border: 1px solid #DBDBDB;
+        border-radius: 3px;
+        color: #A8A7A7;
+        font-size: 13px;
+
+        &:placeholder {
+            color: #A8A7A7;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    &__icon-search {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__search-btn {
+        border: none;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        height: 43px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border: none !important;
+        }
+    }
+
+    &__search-list {
+        margin-top: 29px;
+        padding-right: 26px;
+        position: relative;
+        height: 155px;
+        overflow: hidden;
+        margin-bottom: 27px;
+    }
+
+    &__search-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__user {
+        display: flex;
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    &__user-photo {
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-right: 10px;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    &__user-data {
+        font-size: 13px;
+        line-height: 15px;
+        color: #666;
+    }
+
+    &__user-name {
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+
+    &__user-status {
+        font-size: 11px;
+        line-height: 15px;
+        color: #BABABA;
+        text-align: right;
+    }
+
+    .modal-form__user-btn {
+        width: auto;
+        height: auto;
+        padding: 6px 10px;
+        margin-left: 20px;
+
+        &:after {
+            content: none;
+        }
+    }
+
+    .modal-footer {
+        padding: 30px 50px;
+        border-top: 1px solid #E3E3E3;
+        background: #FAFAFA;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-size: 13px;
+            line-height: 18px;
+            color: #000;
+            margin-right: 10px;
+            flex: 1;
+        }
+
+        &__action {
+            display: flex;
+
+            .btn {
+                margin: 0;
+
+                &:last-child {
+                    margin-left: 9px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.modal-backdrop {
+    background: linear-gradient(233.13deg, #663d73 0%, #6987d1 100%);
+    
+    &.show {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-form .modal-content {
+        margin: auto 10px;
+    }
+
+    .modal-form .modal-header {
+        padding: 18px 20px 20px;
+    }
+
+    .modal-form .close {
+        right: 20px;
+    }
+
+    .modal-form .modal-body {
+        padding: 24px 20px 0;
+    }
+
+    .modal-form__search-list {
+        margin-top: 25px;
+        margin-bottom: 18px;
+    }
+
+    .modal-form__user-data {
+        font-size: 11px;
+    }
+
+    .modal-form .modal-form__user-btn {
+        padding: 6px 7px;
+        margin-left: 15px;
+        font-size: 10px;
+    }
+
+    .modal-form .modal-footer {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    .modal-form .modal-header {
+        padding: 15px;
+    }
+
+    .modal-form .modal-title {
+        font-size: 18px;
+    }
+
+    .modal-form .close {
+        right: 15px;
+    }
+
+    .modal-form .modal-body {
+        padding: 20px 15px 0; 
+    }
+
+    .modal-form__search-btn {
+        display: none;
+    }
+
+    .modal-form__search-field {
+        padding-right: 15px;
+    }
+
+    .modal-form__search-list {
+        padding-right: 13px;
+    }
+
+    .modal-form__user-status {
+        display: none;
+    }
+
+    .modal-form .modal-footer {
+        padding: 15px;
+    }
+
+    .modal-form .modal-footer__title {
+        display: none;
+    }
+
+    .modal-form .modal-footer__action {
+        flex: 1;
+        margin: 0;
+        justify-content: center;
+    }
+}

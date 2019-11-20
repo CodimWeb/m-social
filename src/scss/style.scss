@@ -1,0 +1,14 @@
+//bs 4
+@import "~bootstrap/scss/bootstrap";
+
+// abstract
+@import 'abstract/variables';
+
+//base
+@import 'base/fonts';
+@import 'base/ui';
+
+//components
+@import 'components/buttons';
+@import 'components/modal-form';
+@import 'components/perfect-scrollbar';
